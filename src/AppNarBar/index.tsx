@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useCallback } from 'react';
 import { NavBar, Icon } from 'antd-mobile';
 import type { NavBarProps } from 'antd-mobile/es/nav-bar/PropsType';
 import './index.less';
+
 // @ts-ignore
 const hxAppHelper = window?.hxAppHelper!;
 export type AppNavbarProps = {
@@ -31,11 +32,11 @@ const AppNarBar: React.FC<AppNavbarProps> = props => {
    useEffect(() => {
      if (isShow) {
       // 显示/隐藏: App原生Narbar
-      hxAppHelper.hideLocalNavBar(true);
+      hxAppHelper?.hideLocalNavBar(true);
       console.log('hideLocalNavBar  true ')
     } else {
       console.log('hideLocalNavBar  false ',hxAppHelper)
-      hxAppHelper.hideLocalNavBar(false);
+      hxAppHelper?.hideLocalNavBar(false);
     }
   }, []);
   const renderRight = useCallback(() => {

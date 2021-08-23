@@ -1,6 +1,6 @@
 {
   "name": "@aistarfish/h5ui-test",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -39,7 +39,11 @@
     "father-build": "^1.19.4",
     "prettier": "2.3.1",
     "antd-mobile": "^2.3.4",
-    "babel-plugin-import": "^1.12.2"
+    "babel-plugin-import": "^1.12.2",
+    "@types/lodash": "^4.14.171",
+    "@types/qs": "^6.9.7",
+    "lodash": "^4.17.21",
+    "qs": "^6.10.1"
   },
   "peerDependencies": {
     "react": "16.8.0",
