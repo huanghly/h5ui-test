@@ -1,0 +1,54 @@
+{
+  "name": "@aistarfish/h5ui-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:huanghly/h5ui-test.git"
+  },
+  "scripts": {
+    "start": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "build": "father-build",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "release": "npm run build && npm publish",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
+  "devDependencies": {
+    "@umijs/test": "^3.0.5",
+    "dumi": "^1.1.17",
+    "father-build": "^1.19.4",
+    "prettier": "2.3.1",
+    "antd-mobile": "^2.3.4",
+    "babel-plugin-import": "^1.12.2"
+  },
+  "peerDependencies": {
+    "react": "16.8.0",
+    "react-dom": "16.8.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
