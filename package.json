@@ -9,6 +9,10 @@
     "type": "git",
     "url": "git@github.com:huanghly/h5ui-test.git"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -26,6 +30,7 @@
   "files": [
     "dist",
     "lib",
+    "es",
     "src"
   ],
   "devDependencies": {
